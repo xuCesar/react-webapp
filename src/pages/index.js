@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Banner from '@cp/banner/Banner'
 import Nav from '@cp/nav/Nav'
 import Home from './home'

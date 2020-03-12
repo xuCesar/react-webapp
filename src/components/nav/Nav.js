@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Row, Col, Menu, Icon } from 'antd'
+import { Row, Col, Menu } from 'antd'
 import { withRouter } from 'react-router-dom'
+import { HomeOutlined, ProfileOutlined, ReadOutlined, SmileOutlined } from '@ant-design/icons';
 import './index.scss'
 
 class Nav extends Component {
@@ -13,7 +14,7 @@ class Nav extends Component {
 
   handleClickNav = () => {
     console.log(this.props)
-    this.props.history.push('/');
+    // this.props.history.push('/');
   }
 
   render() {
@@ -21,17 +22,15 @@ class Nav extends Component {
       <div className='nav-wrap'>
         
         <Row className='nav-bar' align='middle' justify='center'>
-          {/* <Col  xs={24} sm={24} md={10} lg={10} xl={10}>
-              <span className="header-logo">XXX</span>
-          </Col> */}
-          <Col span={6}>
-          <span className="header-logo">XXX</span>
+          <Col span={4}>
+            <span className="header-logo">VENCET.</span>
           </Col>
-          <Col className='nav-list' span={18}>
+          <Col className='nav-list' span={20}>
             <Menu mode='horizontal'>
-              <Menu.Item onClick={this.handleClickNav}> 首页 </Menu.Item>
-              <Menu.Item> 笔记 </Menu.Item>
-              <Menu.Item> 读书 </Menu.Item>
+              <Menu.Item onClick={this.handleClickNav}> <HomeOutlined /> 首页 </Menu.Item>
+              <Menu.Item> <ProfileOutlined /> 笔记 </Menu.Item>
+              <Menu.Item> <ReadOutlined /> 读书 </Menu.Item>
+              <Menu.Item> <SmileOutlined /> 关于 </Menu.Item>
             </Menu>
           </Col>
           
