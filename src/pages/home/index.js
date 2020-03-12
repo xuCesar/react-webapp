@@ -21,9 +21,10 @@ export default class Home extends Component {
       'list|9': [{
         'id|+1': 1,
         'name': '@name',
-        'title': '@sentence(10)',
-        'summary': '@paragraph(3)',
-        'time': '@datetime(yyyy-MM-dd)'
+        'title': '@cparagraph(2)',
+        'summary': '@cparagraph(3)',
+        'time': '@datetime(yyyy-MM-dd)',
+        'image': '@image(200x100)'
       }]
     })
 
