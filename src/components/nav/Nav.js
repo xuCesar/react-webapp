@@ -6,6 +6,13 @@ import './index.scss'
 
 class Nav extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      logo: 'VENCENT.'
+    }
+  }
+
   componentDidMount() {
   }
 
@@ -15,12 +22,22 @@ class Nav extends Component {
   }
 
   render() {
+    const { logo } = this.state 
     return (
       <div className='nav-wrap'>
         
         <Row className='nav-bar' align='middle' justify='space-between'>
           <Col span={4}>
-            <span className="header-logo">VENCET.</span>
+            <div className="header-logo">
+              {
+                [...logo].map((item, index) => {
+                  console.log(index)
+                  return (
+                    <span key={index} className={index%2 === 1 ? 'small' : ''}>{item}</span>
+                  )
+                })
+              }
+            </div>
           </Col>
           <Col className='nav-list' span={20}>
             <Menu mode='horizontal'>

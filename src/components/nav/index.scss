@@ -17,3 +17,7 @@
 .nav-list{
   text-align: right;
 }
+
+.small:not(:last-child){
+  font-size: 12px;
+}
