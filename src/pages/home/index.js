@@ -3,39 +3,45 @@ import ArticleList from '@cp/article/ArticleList'
 
 import Mock from 'mockjs'
 
-import axios from 'axios'
+// import axios from 'axios'
 
 import './index.scss'
+
+const dataSource = Mock.mock({
+  'list|9': [{
+    'id|+1': 1,
+    'name': '@name',
+    'title': '@cparagraph(2)',
+    'summary': '@cparagraph(3)',
+    'time': '@datetime(yyyy-MM-dd)',
+    'image': '@image(200x100)'
+  }]
+})
 
 export default class Home extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      dataSource: null
+      dataSource: dataSource
     }
   }
 
-  componentWillMount() {
-    const dataSource = Mock.mock({
-      'list|9': [{
-        'id|+1': 1,
-        'name': '@name',
-        'title': '@cparagraph(2)',
-        'summary': '@cparagraph(3)',
-        'time': '@datetime(yyyy-MM-dd)',
-        'image': '@image(200x100)'
-      }]
-    })
+  UNSAFE_componentWillMount() {
+  }
 
-    this.setState({ dataSource })
+  componentDidMount() {
   }
 
   render() {
+    const { dataSource } = this.state
+    if (!dataSource.list) {
+      return null
+    }
     return (
       <div className="content">
           <ArticleList 
-            dataSource={this.state.dataSource.list}
+            dataSource={dataSource.list}
           />
       </div>
     )

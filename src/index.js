@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader/root';
+// import { AppContainer } from 'react-hot-loader';
 
 import {Provider} from 'react-redux';
 import { Switch } from 'react-router' // react-router v4/v5
@@ -7,24 +9,23 @@ import { ConnectedRouter } from 'connected-react-router'
 import configureStore, { history } from './state/configureStore'
 
 import App from './App'
-import { AppContainer } from 'react-hot-loader';
+
+const WithHotReload = process.env.NODE_ENV === 'production' ? App : hot(App);
 
 const store = configureStore()
 
 // Wrap the rendering in a function:
 const render = Component => {
     ReactDOM.render(
-        <AppContainer>
-            <Provider store={store}>
-                <ConnectedRouter history={history}>
-                  <>
-                    <Switch>
-                      <Component />
-                    </Switch>
-                  </>
-                </ConnectedRouter>
-            </Provider>
-        </AppContainer>,
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
+              <>
+                <Switch>
+                  <Component />
+                </Switch>
+              </>
+            </ConnectedRouter>
+        </Provider>,
         document.getElementById('root'));
 };
 
@@ -36,7 +37,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     // Webpack Hot Module Replacement API
     if (module.hot) {
         module.hot.accept('./App', () => {
-            render(App);
+            render(WithHotReload);
         });
     }
 } else {
@@ -47,4 +48,4 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 
 
 // Render once
-render(App);
+render(WithHotReload);

@@ -5,9 +5,6 @@ import { HomeOutlined, ProfileOutlined, ReadOutlined, SmileOutlined } from '@ant
 import './index.scss'
 
 class Nav extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
   }
