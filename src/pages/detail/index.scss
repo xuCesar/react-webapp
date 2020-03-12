@@ -1,0 +1,17 @@
+.content{
+  display: flex;
+}
+
+.markdown-navigation .title-level1{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.markdown-navigation .title-anchor:hover{
+  background-color: transparent;
+  color: rgb(168, 55, 55);
+}
+
+.markdown-navigation .title-anchor.active{
+  background-color: transparent;
+}
