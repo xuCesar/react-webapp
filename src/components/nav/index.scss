@@ -4,8 +4,8 @@
 
 .affix-wrap{
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 5px #eee;
+  background-color: #f2f3f7;
+  box-shadow: 0 15px 20px #e9ebf1;
 }
 
 .nav-bar{
@@ -21,6 +21,11 @@
 
 .nav-list{
   text-align: right;
+  
+}
+
+.ant-menu{
+  background-color: #f2f3f7;
 }
 
 .small:not(:last-child){

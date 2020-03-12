@@ -4,12 +4,13 @@
   border-radius: 2px;
   box-sizing: border-box;
   margin-bottom: 30px;
-  box-shadow: 0 0 6px #eee;
+  background-color: #f2f3f7;
+  box-shadow: 0 5px 10px #e9ebf1;
   transition: all ease-in 0.5s;
 }
 
 .list-wrap:hover{
-  box-shadow: 0 6px 6px #ccc;
+  box-shadow: 5px 10px 20px #dadeeb;
 }
 
 .ant-list-vertical .ant-list-item-main{

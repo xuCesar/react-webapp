@@ -18,7 +18,7 @@ class Nav extends Component {
 
   handleClickNav = () => {
     console.log(this.props)
-    // this.props.history.push('/');
+    this.props.history.push('/');
   }
 
   render() {
