@@ -6,7 +6,7 @@ import { Switch } from 'react-router' // react-router v4/v5
 import { ConnectedRouter } from 'connected-react-router'
 import configureStore, { history } from './state/configureStore'
 
-import RootPage from './pages'
+import App from './App'
 import { AppContainer } from 'react-hot-loader';
 
 const store = configureStore()
@@ -35,8 +35,8 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     // Do this once
     // Webpack Hot Module Replacement API
     if (module.hot) {
-        module.hot.accept('./pages', () => {
-            render(RootPage);
+        module.hot.accept('./App', () => {
+            render(App);
         });
     }
 } else {
@@ -47,4 +47,4 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 
 
 // Render once
-render(RootPage);
+render(App);
