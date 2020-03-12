@@ -1,4 +1,4 @@
-const { override, fixBabelImports, addWebpackAlias } = require('customize-cra')
+const { override, fixBabelImports, addBabelPlugin, addWebpackAlias } = require('customize-cra')
 const path = require('path');
 
 const resolve = dir => {
@@ -12,10 +12,12 @@ module.exports = override(
     libraryDirectory: 'es',
     style: 'css'
   }),
+  addBabelPlugin('react-hot-loader/babel'),
   // 配置路径别名
   addWebpackAlias({
     '@': resolve('src'),
     '@cp': resolve('src/components'),
-    '@img': resolve('src/images')
+    '@img': resolve('src/images'),
+    'react-dom':  process.env.NODE_ENV === 'production' ? 'react-dom' : '@hot-loader/react-dom'
   })
 )
