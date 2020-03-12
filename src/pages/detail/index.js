@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Row, Col ,Affix, Icon ,Breadcrumb  } from 'antd'
+import {Row, Col , Affix, Icon ,Breadcrumb  } from 'antd'
 import ReactMarkdown from 'react-markdown'
 import MarkNav from 'markdown-navbar'
 import 'markdown-navbar/dist/navbar.css'
@@ -56,7 +56,7 @@ export default class Detail extends Component {
           </Col>
 
           <Col span={6}>
-            <Affix offsetTop={5}>
+            <Affix offsetTop={60}>
               <div className="content-right">
                 <div className="nav-title">文章目录</div>
                   <MarkNav
