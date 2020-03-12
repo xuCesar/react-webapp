@@ -5,7 +5,15 @@
 
 .nav-bar{
   width: 100%;
-  max-width: 1024px;
+  max-width: 720px;
   margin: 0 auto;
   font-weight: 300;
+}
+
+.header-logo{
+  padding-left: 20px;
+}
+
+.nav-list{
+  text-align: right;
 }

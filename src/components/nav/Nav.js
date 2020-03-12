@@ -18,7 +18,7 @@ class Nav extends Component {
     return (
       <div className='nav-wrap'>
         
-        <Row className='nav-bar' align='middle' justify='center'>
+        <Row className='nav-bar' align='middle' justify='space-between'>
           <Col span={4}>
             <span className="header-logo">VENCET.</span>
           </Col>
