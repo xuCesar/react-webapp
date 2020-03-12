@@ -10,7 +10,7 @@ module.exports = override(
   fixBabelImports('import', {
     libraryName: 'antd',
     libraryDirectory: 'es',
-    style: true
+    style: 'css'
   }),
   // 配置路径别名
   addWebpackAlias({
