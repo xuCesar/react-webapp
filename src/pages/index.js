@@ -4,6 +4,7 @@ import Banner from '@cp/banner/Banner'
 import Nav from '@cp/nav/Nav'
 import Home from './home'
 import Detail from './detail'
+import Footer from '@cp/footer/Footer'
 
 import '../styles/reset.css'
 import '../styles/main.scss'
@@ -20,6 +21,7 @@ class RootPage extends Component {
           <Route exact path='/' component={Home} ></Route>
           <Route path='/detail/:id' component={Detail} ></Route>
         </div>
+        <Footer></Footer>
       </div>
     )
   }
