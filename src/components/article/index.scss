@@ -23,3 +23,25 @@
   font-weight: 200;
   font-size: 14px;
 }
+
+.ant-list-pagination{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.ant-pagination{
+  background-color: #f2f3f7;
+  box-shadow: 5px 5px 30px #dde0e7;
+}
+
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{
+  border: none;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+.ant-pagination-item{
+  border: none;
+  background-color: transparent;
+}
