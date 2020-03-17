@@ -9,16 +9,17 @@ const middlewares = [
   thunk,
 ];
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose
+
+const enhancer = composeEnhancers(applyMiddleware(routerMiddleware(history), ...middlewares))
+
 export default function configureStore(preloadedState) {
+  console.log('preloadedState', preloadedState)
   const store = createStore(
     createRootReducer(history), // root reducer with router state
     preloadedState,
-    compose(
-      applyMiddleware(
-        routerMiddleware(history),
-        ...middlewares
-      ),
-    ),
+    enhancer
   )
 
   return store
