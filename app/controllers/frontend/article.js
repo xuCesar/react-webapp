@@ -19,6 +19,22 @@ function list(req, res, next) {
   .catch(next)
 }
 
+function detail(req, res, next) {
+  let { id } = req.query;
+  Articles.findOne({
+    where: { id }
+  }).then(article => {
+    if (article) {
+      res.json(article)
+    }
+  }).catch(err => next(err))
+}
+
+function get(req, res) {
+  return res.json(req.instance);
+}
+
 module.exports = {
-  list
+  list,
+  detail
 }
