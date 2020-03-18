@@ -38,9 +38,7 @@ class Home extends Component {
 
 
   render() {
-    // const { dataSource } = this.state
     const { articleList } = this.props
-    console.log(articleList)
     if (!articleList.length) {
       return null
     }

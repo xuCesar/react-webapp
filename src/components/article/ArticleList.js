@@ -12,7 +12,6 @@ export default class ArticleList extends Component {
 
   render() {
     const { dataSource } = this.props
-    console.log('dataSource', dataSource)
     return (
       <div className='article-wrap'>
         <List

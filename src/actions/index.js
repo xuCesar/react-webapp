@@ -19,3 +19,22 @@ export const getArticleList = (params) => dispatch => {
       })
     })
 }
+
+export const getArticleDetail = (params) => dispatch => {
+  dispatch({
+    type: types.DETAIL_REQUEST_START
+  })
+  return axios.get('http://127.0.0.1:7002/api/frontend/article/detail/' + params)
+    .then(res => {
+      dispatch({
+        type: types.DETAIL_REQUEST_SUCCESS,
+        data: res.data
+      })
+    })
+    .catch(error => {
+      dispatch({
+        type: types.DETAIL_REQUEST_FAILURE,
+        error: error.response.data.message
+      })
+    })
+}

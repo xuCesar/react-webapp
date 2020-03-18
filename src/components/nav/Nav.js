@@ -17,7 +17,6 @@ class Nav extends Component {
   }
 
   handleClickNav = () => {
-    console.log(this.props)
     this.props.history.push('/');
   }
 
@@ -32,7 +31,6 @@ class Nav extends Component {
                 <div className="header-logo">
                   {
                     [...logo].map((item, index) => {
-                      console.log(index)
                       return (
                         <span key={index} className={index%2 === 1 ? 'small' : ''}>{item}</span>
                       )
