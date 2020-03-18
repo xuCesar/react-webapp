@@ -34,12 +34,12 @@ export default class ArticleList extends Component {
                 <img
                   width={272}
                   alt="logo"
-                  src={item.image}
+                  src={item.cover}
                 />
               }
             >
               <List.Item.Meta title={<a href={`/detail/${item.id}`}>{item.title}</a>} />
-              {item.summary}
+              {item.intro}
             </List.Item>
           )}
         >
