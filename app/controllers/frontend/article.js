@@ -19,8 +19,11 @@ function list(req, res, next) {
   .catch(next)
 }
 
-function detail(req, res, next) {
-  let { id } = req.query;
+function detail(req, res, next, id) {
+  console.log(id)
+  // console.log(req.query)
+  // console.log(req.body)
+  // let { id } = req.query;
   Articles.findOne({
     where: { id }
   }).then(article => {
