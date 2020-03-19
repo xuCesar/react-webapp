@@ -18,6 +18,7 @@ module.exports = override(
     '@': resolve('src'),
     '@cp': resolve('src/components'),
     '@img': resolve('src/images'),
+    '@action': resolve('src/store/actions'),
     'react-dom':  process.env.NODE_ENV === 'production' ? 'react-dom' : '@hot-loader/react-dom'
   })
 )

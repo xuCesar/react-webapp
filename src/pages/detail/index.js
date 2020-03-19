@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {Row, Col , Affix, Icon ,Breadcrumb  } from 'antd'
-import { getArticleDetail } from '../../actions'
+import { getArticleDetail } from '@action'
 import ReactMarkdown from 'react-markdown'
 import MarkNav from 'markdown-navbar'
 import 'markdown-navbar/dist/navbar.css'

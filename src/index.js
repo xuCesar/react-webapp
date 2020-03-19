@@ -6,7 +6,7 @@ import { hot } from 'react-hot-loader/root';
 import {Provider} from 'react-redux';
 import { Switch } from 'react-router' // react-router v4/v5
 import { ConnectedRouter } from 'connected-react-router'
-import configureStore, { history } from './state/configureStore'
+import configureStore, { history } from './store/configureStore'
 
 import App from './App'
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ArticleList from '@cp/article/ArticleList'
 
-import { getArticleList } from '../../actions'
+import { getArticleList } from '@action'
 
 import Mock from 'mockjs'
 
