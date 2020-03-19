@@ -17,12 +17,16 @@ class Detail extends Component {
   }
 
   render() {
+    const { article } = this.props
+    if (!article) {
+      return null
+    }
     return (
       <div className='content'>
         <Row justify='space-between'>
           <Col span={15}>
             <div className='content-left'>
-              ddd
+              {article.content}
             </div>
           </Col>
 
@@ -42,7 +46,7 @@ class Detail extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    content: state.detail.content
+    article: state.detail.article
   }
 }
 
