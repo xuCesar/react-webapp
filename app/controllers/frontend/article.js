@@ -27,8 +27,10 @@ function detail(req, res, next) {
   }).then(article => {
     if (article) {
       res.json({message: 'ok', data: article})
+    } else {
+      res.jsonWithBadRequest('文章不存在！')
     }
-  }).catch(err => next(err))
+  }).catch(next)
 }
 
 function get(req, res) {
