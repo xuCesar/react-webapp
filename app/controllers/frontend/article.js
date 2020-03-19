@@ -19,16 +19,14 @@ function list(req, res, next) {
   .catch(next)
 }
 
-function detail(req, res, next, id) {
+function detail(req, res, next) {
+  let { id } = req.params;
   console.log(id)
-  // console.log(req.query)
-  // console.log(req.body)
-  // let { id } = req.query;
   Articles.findOne({
     where: { id }
   }).then(article => {
     if (article) {
-      res.json(article)
+      res.json({message: 'ok', data: article})
     }
   }).catch(err => next(err))
 }
