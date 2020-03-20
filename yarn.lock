@@ -5965,6 +5965,11 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
+highlight.js@^9.18.1:
+  version "9.18.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
+  integrity sha1-7SGqAB/mJSuxCj121HVzxlOf4Tw=
+
 history@^4.10.1, history@^4.9.0:
   version "4.10.1"
   resolved "https://registry.npm.taobao.org/history/download/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
@@ -7761,6 +7766,11 @@ markdown-navbar@^1.4.0:
     core-js "3"
     prop-types "^15.7.2"
     react "^16.12.0"
+
+marked@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.npm.taobao.org/marked/download/marked-0.8.1.tgz#a233f39572fab15ede53a3c3be8a139bff86d2dd"
+  integrity sha1-ojPzlXL6sV7eU6PDvooTm/+G0t0=
 
 md5.js@^1.3.4:
   version "1.3.5"
